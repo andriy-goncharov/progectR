@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.ander'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.15.0'
+    implementation 'org.testng:testng:7.7.0'
+
+}
+
+test {
+    useTestNG() {
+        useDefaultListeners = true
+        suites "testNG.xml"
+    }
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
