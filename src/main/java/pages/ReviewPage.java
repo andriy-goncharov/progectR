@@ -2,7 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import org.testng.Assert;
 
 import java.nio.charset.StandardCharsets;
 
@@ -103,6 +103,7 @@ public class ReviewPage extends BasePage {
 
 
     private final By btnSend = By.xpath("//input[@data-gaq='add_reviews']");
+    private final By hReview = By.cssSelector("#reviewsForm > div > h2");
 
     ////////////////// Characteristics /////////////////////
     public ReviewPage сlickCookie() {
@@ -194,7 +195,7 @@ public class ReviewPage extends BasePage {
     }
 
     public ReviewPage inputReview(String yourReview) {
-        driver.findElement(textReview).sendKeys(new String(yourReview.getBytes(),StandardCharsets.UTF_8));
+        driver.findElement(textReview).sendKeys(new String(yourReview.getBytes(), StandardCharsets.UTF_8));
         return this;
     }
 
@@ -429,9 +430,18 @@ public class ReviewPage extends BasePage {
     }
 
     public ReviewPage sendReview() {
-//        driver.findElement(btnSend).click();
+        driver.findElement(btnSend).click();
+        return this;
+    }
+
+    public ReviewPage checkReviewExist() {
+        // 4649 €
+        waitElementIsWisible(hReview);
+        System.out.println(hReview);
+        Assert.assertTrue(driver.findElement(hReview).getText().contains("Suzuki Vitara 2018"));
         return this;
     }
 }
+
 
 

@@ -54,5 +54,7 @@ public class ReviewTest extends BaseTest {
                 .selectDesignLevel(5)
                 .selectPriceLevel(5)
                 .sendReview();
+        review
+                .checkReviewExist();
     }
 }

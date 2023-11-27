@@ -25,9 +25,4 @@ public class BasePage {
         new WebDriverWait(this.driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.visibilityOfElementLocated(element));
         return element;
     }
-
-    public String setCharset (String text){
-        Charset charset = Charset.forName("UTF-8");
-        return new String(text.getBytes(charset));
-    }
 }

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
@@ -24,7 +25,9 @@ public class CommonAction {
                 break;
             case "EDGE":
                 System.setProperty("webdriwer.edge.driver","C:\\webDriver\\msedgedriver.exe");
-                driver = new EdgeDriver();
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--lang=uk-UA");
+                driver = new EdgeDriver(edgeOptions);
                 break;
             default:
                 Assert.fail("Incorrect platform or browser name: "+ CHROME);

@@ -55,7 +55,6 @@ public class CalculatorPage extends BasePage {
         waitElementIsWisible(fieldPriceResult);
         System.out.println();
         Assert.assertEquals(driver.findElement(fieldPriceResult).getText(), "4649 €");
-
         return this;
     }
 }

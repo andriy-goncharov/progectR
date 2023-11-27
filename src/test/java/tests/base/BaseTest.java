@@ -2,6 +2,7 @@ package tests.base;
 
 import common.CommonAction;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import pages.BasePage;
 import pages.CalculatorPage;
@@ -17,7 +18,7 @@ public class BaseTest {
 
 
 
-    @AfterSuite (alwaysRun = true)
+    @AfterClass(alwaysRun = true)
     public void close(){
         if (HOLD_BROWSER_OPEN){
             driver.quit();
