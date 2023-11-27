@@ -52,7 +52,6 @@ public class CalculatorPage extends BasePage {
 
     public CalculatorPage checkCustomsClearenceCost() {
         // 4649 €
-        StringBuilder findedPrice = new StringBuilder();
         waitElementIsWisible(fieldPriceResult);
         System.out.println();
         Assert.assertEquals(driver.findElement(fieldPriceResult).getText(), "4649 €");

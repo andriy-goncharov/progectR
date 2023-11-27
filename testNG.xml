@@ -3,6 +3,7 @@
     <test name="MyTest">
         <classes>
             <class name="tests.page.CalculatorTest"/>
+            <class name="tests.page.ReviewTest"/>
         </classes>
     </test>
 </suite>

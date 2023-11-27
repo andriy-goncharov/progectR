@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a2dd930-a913-43ec-b977-dcdece205c87" name="Changes" comment="additions improvements">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/ReviewPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/page/ReviewTest.java" afterDir="false" />
+    <list default="true" id="7a2dd930-a913-43ec-b977-dcdece205c87" name="Changes" comment="added classes verify Review">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/Constants/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/CommonAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/CommonAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ReviewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ReviewPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/page/ReviewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/page/ReviewTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,14 +75,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ander/IdeaProjects/projectR&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ander/IdeaProjects/projectR",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ander\IdeaProjects\projectR" />
@@ -87,8 +93,15 @@
       <recent name="C:\Users\ander\IdeaProjects\projectR\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tests.Constants" />
+      <recent name="constants" />
       <recent name="tests.page" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle :test" />
+    </option>
   </component>
   <component name="RunManager" selected="Gradle.projectR [build]">
     <configuration name="CalculatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -114,6 +127,50 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ReviewTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.page.ReviewTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="projectR [:test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="projectR [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -135,25 +192,23 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="tests.page.CalculatorTest and 1 more" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="projectR [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests &quot;tests.page.CalculatorTest&quot;" />
-            <option value="--tests &quot;tests.page.CalculatorTest2&quot;" />
+            <option value="testClasses" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -161,8 +216,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.projectR [build]" />
+        <item itemvalue="Gradle.ReviewTest" />
+        <item itemvalue="Gradle.projectR [:test]" />
+        <item itemvalue="Gradle.projectR [testClasses]" />
         <item itemvalue="Gradle.CalculatorTest" />
-        <item itemvalue="Gradle.tests.page.CalculatorTest and 1 more" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700578572407</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added classes verify Review">
+      <created>1700778035354</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700778035354</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +270,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added .gitignore" />
     <MESSAGE value="additions improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="additions improvements" />
+    <MESSAGE value="added classes verify Review" />
+    <option name="LAST_COMMIT_MESSAGE" value="added classes verify Review" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
