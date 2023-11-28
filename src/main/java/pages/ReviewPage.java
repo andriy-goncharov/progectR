@@ -435,7 +435,6 @@ public class ReviewPage extends BasePage {
     }
 
     public ReviewPage checkReviewExist() {
-        // 4649 €
         waitElementIsWisible(hReview);
         System.out.println(hReview);
         Assert.assertTrue(driver.findElement(hReview).getText().contains("Suzuki Vitara 2018"));
